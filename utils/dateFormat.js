@@ -1,7 +1,7 @@
 const addDateSuffix = date => {
     let dateString = date.toString();
 
-    const lastCharacters = date.charAt(dateString.length -1);
+    const lastCharacters = dateString.charAt(dateString.length -1);
     if (lastCharacters === '1'&& dateString !== '11') {
         dateString = `${dateString}st`;
     } else if (lastCharacters === '2'&& dateString !== '12') {
@@ -85,7 +85,7 @@ module.exports = ( timestamp, {monthLength = 'short', dateSuffix = true} = {} ) 
         amOrPm = 'am'
     }
 
-    const formattedTimeandDate = `${formatMonth} ${dayOfMonth}, ${year} at ${hour}:${minutes} ${amOrPm}`;
+    const formattedTimeandDate = `${formatMonth} ${dayOfMonth}, ${year} at ${hr}:${minutes} ${amOrPm}`;
     return formattedTimeandDate;
 
 }
